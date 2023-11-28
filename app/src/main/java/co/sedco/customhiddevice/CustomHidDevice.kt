@@ -6,8 +6,8 @@ import co.sedco.usbhid.UsbHidDevice
 
 class CustomHidDevice(appContext: Context, connectionHandler: IUsbConnectionHandler): UsbHidDevice(appContext, connectionHandler, MyVendorId, MyProductId) {
     companion object {
-        const val MyVendorId = 0x1F52
-        const val MyProductId = 0x0010
+        const val MyVendorId = 0x1111
+        const val MyProductId = 0x2222
 
         const val TAG = "CustomHidDevice"
         const val SET_DEVICE_COMMAND = 0xC4.toByte()

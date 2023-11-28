@@ -3,10 +3,10 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
-/**Create github.properties in root project folder file with gpr.usr=GITHUB_USER_ID  & gpr.key=PERSONAL_ACCESS_TOKEN**/
-def githubPropertiesFile = rootProject.file("github.properties");
-def githubProperties = new Properties()
-githubProperties.load(new FileInputStream(githubPropertiesFile))
+///**Create github.properties in root project folder file with gpr.usr=GITHUB_USER_ID  & gpr.key=PERSONAL_ACCESS_TOKEN**/
+//def githubPropertiesFile = rootProject.file("github.properties");
+//def githubProperties = new Properties()
+//githubProperties.load(new FileInputStream(githubPropertiesFile))
 
 android {
     compileSdk 32
@@ -37,16 +37,16 @@ android {
     repositories {
         google()
         mavenCentral()
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/siqneibi/UsbHid")
-
-            credentials {
-                /**Create github.properties in root project folder file with gpr.usr=GITHUB_USER_ID  & gpr.key=PERSONAL_ACCESS_TOKEN**/
-                username = githubProperties['gpr.usr']
-                password = githubProperties['gpr.key']
-            }
-        }
+//        maven {
+//            name = "GitHubPackages"
+//            url = uri("https://maven.pkg.github.com/siqneibi/UsbHid")
+//
+//            credentials {
+//                /**Create github.properties in root project folder file with gpr.usr=GITHUB_USER_ID  & gpr.key=PERSONAL_ACCESS_TOKEN**/
+//                username = githubProperties['gpr.usr']
+//                password = githubProperties['gpr.key']
+//            }
+//        }
     }
 }
 
